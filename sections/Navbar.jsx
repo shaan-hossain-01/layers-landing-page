@@ -11,7 +11,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <section className="py-4 lg:py-8">
+    <section className="py-4 lg:py-8 flex justify-center">
       <div className="container max-w-5xl">
         <div className="grid grid-cols-2 lg:grid-cols-3 border rounded-full border-white/15 p-2 px-4 md:pr-2 items-center justify-center ">
           <div>
