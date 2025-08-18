@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logoImage from "@/app/assets/images/logo.svg";
+import Button from "@/app/components/Button";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -12,11 +13,15 @@ export default function Navbar() {
   return (
     <section className="py-4">
       <div className="container">
-        <div className="grid grid-cols-2 border rounded-full border-white/15 p-2 px-4 items-center justify-center ">
+        <div className="grid grid-cols-2 border rounded-full border-white/15 p-2 px-4 md:pr-2 items-center justify-center ">
           <div>
-            <Image src={logoImage} alt="Logo" className="h-9 w-auto" />
+            <Image
+              src={logoImage}
+              alt="Logo"
+              className="h-9 md:h-auto w-auto"
+            />
           </div>
-          <div className="flex justify-end items-center">
+          <div className="flex justify-end items-center gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -33,12 +38,11 @@ export default function Navbar() {
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
-            <button className="border border-white  rounded-full h-12 px-6 font-medium">Log In</button>
-            <button className="border border-white  rounded-full h-12 px-6 font-medium">Sign Up</button>
+            <Button variant="secondary">Log In</Button>
+            <Button variant="primary">Sign Up</Button>
           </div>
         </div>
       </div>
-    
     </section>
   );
 }
