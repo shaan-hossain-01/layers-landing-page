@@ -1,3 +1,5 @@
+import Button from "@/app/components/Button";
+
 export default function Hero() {
   return (
     <section>
@@ -16,9 +18,9 @@ export default function Hero() {
           understanding your unique needs and crafting tailored solutions that
           drive results.
         </p>
-        <form>
+        <form className="flex border border-white/15 rounded-full p-2 mt-8">
           <input type="email" placeholder="Enter your email" />
-          <button type="submit">Sign Up</button>
+          <Button type="submit" variant="primary" className="whitespace-nowrap">Sign Up</Button>
         </form>
       </div>
     </section>
