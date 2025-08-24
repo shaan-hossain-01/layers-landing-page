@@ -1,9 +1,26 @@
 import Button from "@/app/components/Button";
+import designExample1Image from "@/app/assets/images/design-example-1.png";
+import designExample2Image from "@/app/assets/images/design-example-2.png";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="container py-24 mx-auto">
+    <section className=" py-24 overflow-x-clip">
+      <div className="container relative mx-auto">
+        <div className="absolute top-16 -left-32">
+          <Image
+            src={designExample1Image}
+            alt="Design Example 1"
+            className=""
+          />
+        </div>
+        <div className="absolute -right-64 -top-16">
+          <Image
+            src={designExample2Image}
+            alt="Design Example 2"
+            className=""
+          />
+        </div>
         <div className="flex items-center justify-center">
           <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full font-semibold text-neutral-950 ">
             ✨ 7.5M round seed round raised
@@ -19,7 +36,11 @@ export default function Hero() {
           drive results.
         </p>
         <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
-          <input type="email" placeholder="Enter your email" className="bg-transparent px-4 flex-1"/>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            className="bg-transparent px-4 flex-1"
+          />
           <Button
             type="submit"
             variant="primary"
